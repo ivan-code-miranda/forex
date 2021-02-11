@@ -1,0 +1,21 @@
+<%= form_with(url: convert_path, method: 'get',) do %>
+    <div class="field1">
+        <h2>Rate 1</h2>
+        <%= select_tag "rate1", options_for_select(@countries, params["rate1"]) %>
+    </div>
+
+    <div class="field2">
+        <h2>Rate 2</h2>
+        <%= select_tag "rate2", options_for_select(@countries, params["rate2"]) %>
+    </div>
+
+    <div class="field3">
+        <h2>Amount</h2>
+        <%= number_field_tag :amount %>
+    </div>
+
+    <div class="actions">
+        <%= submit_tag "convert" %>
+
+    </div>
+<% end %>
